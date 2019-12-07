@@ -160,7 +160,7 @@ public class RandomProcessor extends AbstractProcessor{
     private void addAnnotatedElement(Map<String, List<AnnotatedRandomElement>> map, AnnotatedRandomElement randomElement) {
         String qualifier = randomElement.getQualifiedClassName().toString();
         if (map.get(qualifier) == null) {
-            map.put(qualifier, new ArrayList<AnnotatedRandomElement>());
+            map.put(qualifier, new ArrayList<>());
         }
         map.get(qualifier).add(randomElement);
     }

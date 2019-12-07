@@ -3,6 +3,7 @@ package com.rhythm7.annotationprocessordemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.rhythm7.lib_annotations.RandomInt;
 import com.rhythm7.lib_annotations.RandomString;
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         RandomUtil.inject(this);
 
-        Log.i("RandomInt ==> ", mRandomInt + "");
-        Log.i("RandomString ==> ", mRandomString);
+        TextView tvRandom = findViewById(R.id.tv_random);
+        tvRandom.setText("RandomInt:    " + mRandomInt + "\n"
+                + "RandomString:    " + mRandomString);
     }
 }
